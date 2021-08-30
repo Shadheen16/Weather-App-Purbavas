@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+
+body {
+    background: linear-gradient(192.05deg, #47BFDF 0%, #4A91FF 100%);
+    text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
+}
+
+main{
+    background: rgba(255, 255, 255, 0.199);
+}
+
+#error-message{
+    background-color:rgba(255, 255, 255, 0.199);
+}

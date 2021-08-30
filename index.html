@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Purbavas</title>
+</head>
+
+<body class="text-white max-w-screen min-h-screen" style="font-family: 'Merriweather', serif;">
+    <section id="app" class="">
+        <header class="text-center">
+            <h1 class="text-center text-3xl md:text-4xl m-6 md:mt-12 font-bold">
+                Weather App
+            </h1>
+            <div class="flex">
+                <div id="city" class="ml-auto mt-2 mr-1 font-bold"></div>
+                 <div class="mr-auto flex" id="icon"></div>
+            </div>
+               
+        </header>
+        <main
+            class="w-4/5 md:w-3/5 lg:w-1/2 mx-auto p-5 rounded-md shadow-lg border-2 filter drop-shadow-lg border-opacity-20">
+            <div id="weather-data" class="">
+                <div id="top" class="p-2 flex justify-evenly sm:p-2 my-auto">
+                    <div id="date" class="text-xs font-thin my-auto">
+                        <p>
+                            <span id="day"></span><span id="month"></span>
+                        </p>
+                    </div>
+                    <div id="weather" class="text-sm">
+                        <h3 id="weather-condition">Cloudy</h3>
+                    </div>
+                </div>
+                <div class="p-2 text-center">
+                    <h1 class="text-6xl mb-4"><span id="temparature">29</span>&#8451</h1>
+                    <p  class="text-sm text-thin"><span id="feels-like"></span>&#8451</p>
+                </div>
+                <div id="wind-hum">
+                    <table class="table-auto m-auto">
+                        <tbody>
+                            <tr>
+                                <td class="p-2"><i class="fas fa-wind"></i></td>
+                                <td class="p-2">wind |</td>
+                                <td class="p-2" id="wind-speed">00</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2"><i class="fas fa-water"></i></td>
+                                <td class="p-2">Hum  |</td>
+                                <td class="p-2"id="humidity"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+            <div class="w-4/5 md:w-3/5 lg:w-1/2 mx-auto mt-10">
+                <p id="error-message" class="text-md text-center my-2  md:mb-2 rounded-md">
+
+                </p>
+            </div>
+             <div class="flex-col sm:flex sm:flex-row  mt-2">
+            <input id="search-input"
+                class="relative opacity-20 rounded-t-md sm:rounded-none sm:rounded-l-md h-8 ml-auto px-2 w-full sm:w-56 text-center sm:text-left text-gray-900 shadow-md"
+                type="text" placeholder="city name...." size="15">
+            <button
+            onclick="getSearchLocationData()"
+            class="block
+            border-2 h-8 px-2 rounded-b-md sm:rounded-none sm:rounded-r-md w-full sm:w-20 mr-auto shadow-md">
+                Search
+            </button>
+        </div>
+        </main>
+       
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
